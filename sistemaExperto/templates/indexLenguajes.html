@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lenguajes</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid" style="background-color:#B3E5FC">
+    <div class="col-md-3"></div>
+    <div class="col-md-6" style="background-color:#03A9F4">
+        <h1>Lenguajes de Programación</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>{{nombre}}</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for dato in datos %}
+                <tr>
+                    <td><h4 style="color:#FFFFFF">{{dato.nombre}}</h4></td>
+                </tr>
+            {%endfor%}
+            </tbody>
+        </table>
+    </div>
+    </div>
+</body>
+</html>
