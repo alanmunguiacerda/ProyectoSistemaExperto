@@ -25,7 +25,7 @@
             <tbody>
             {% for dato in datos %}
                 <tr>
-                    <td><a href="http://localhost:8000/home/{{dato.id}}" style="color:#FFFFFF">{{dato.nombre}}</td>
+                    <td><a href="http://localhost:8000/home/?q={{dato.id}}" style="color:#FFFFFF">{{dato.nombre}}</td>
                 </tr>
             {%endfor%}
             </tbody>

@@ -31,7 +31,7 @@ class Tipo(models.Model):
 
 class Lenguaje(models.Model):
     nombre = models.CharField(max_length=30)
-    tipo = models.ForeignKey(Tipo)
+    tipos = models.ManyToManyField(Tipo)
 
     class Meta:
         ordering = ['id']

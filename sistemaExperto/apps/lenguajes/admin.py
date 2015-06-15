@@ -5,8 +5,10 @@ from apps.lenguajes.models import Lenguaje, Tipo, Paradigma
 
 
 class LenguajeAdmin(admin.ModelAdmin):
-    list_display = ('nombre', 'tipo',)
+    list_display = ('nombre',)
     search_fields = ('nombre',)
+    fields = ('nombre', 'tipos',)
+    filter_horizontal = ('tipos',)
     pass
 
 

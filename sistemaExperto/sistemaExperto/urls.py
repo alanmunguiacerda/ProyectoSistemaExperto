@@ -19,5 +19,5 @@ from apps.preguntados.views import landing
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^home/(\d*)?(&&)?(\d*)?$', landing),
+    url(r'^home/(.*)$', landing),
 ]

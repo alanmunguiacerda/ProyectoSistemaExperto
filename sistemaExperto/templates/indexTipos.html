@@ -18,16 +18,21 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>{{nombre}}</th>
+                    <th>{{datosPregunta.pregunta}}</th>
                 </tr>
             </thead>
+            <form action="http://localhost:8000/home/" method="GET">
             <tbody>
             {% for dato in datos %}
                 <tr>
-                    <td><a href="http://localhost:8000/home/{{urlInfo}}&&{{dato.id}}" style="color:#FFFFFF">{{dato.nombre}}</td>
+                    <td><h4><input type="checkbox" name="p" value="{{dato.lenguaje.id}}">{{dato.respuesta}}</input></h4></td>
                 </tr>
             {%endfor%}
+                <tr>
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
             <tbody>
+            </form>
         </table>
     </div>
     </div>

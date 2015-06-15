@@ -22,11 +22,17 @@
                 </tr>
             </thead>
             <tbody>
-            {% for dato in datos %}
+            {% if datos|length > 0 %}
+                {% for dato in datos %}
+                    <tr>
+                        <td><h4 style="color:#FFFFFF">{{dato.nombre}}</h4></td>
+                    </tr>
+                {% endfor %}
+            {% else %}
                 <tr>
-                    <td><h4 style="color:#FFFFFF">{{dato.nombre}}</h4></td>
+                    <td><h4 style="color:#FFFFFF">No hay lenguajes con esas características</h4></td>
                 </tr>
-            {%endfor%}
+            {% endif %}
             </tbody>
         </table>
     </div>

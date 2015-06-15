@@ -5,15 +5,13 @@ from apps.preguntados.models import Pregunta, Respuesta
 
 
 class PreguntasAdmin(admin.ModelAdmin):
-    list_display = ('pregunta', 'tipo',)
-    search_fields = ('tipo',)
-    fields = ('pregunta', 'tipo', 'respuestas',)
-    filter_horizontal = ('respuestas',)
+    list_display = ('pregunta', 'paradigma',)
+    search_fields = ('paradigma',)
     pass
 
 
 class RespuestasAdmin(admin.ModelAdmin):
-    list_display = ('respuesta', 'lenguaje',)
+    list_display = ('respuesta', 'pregunta', 'lenguaje',)
     search_fields = ('lenguaje',)
     pass
 
