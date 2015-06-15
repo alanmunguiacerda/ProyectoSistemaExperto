@@ -41,3 +41,4 @@ class Lenguaje(models.Model):
         return self.nombre
         pass
     pass
+
